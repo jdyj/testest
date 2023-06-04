@@ -10,8 +10,8 @@ before_install:
   - ./gradlew build
   - docker build -t springtest ./
 
-script:
-  - docker run -e CI=true springtest
+#script:
+#  - docker run -e CI=true springtest
 
 
 after_success:
