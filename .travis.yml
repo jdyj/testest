@@ -7,10 +7,11 @@ services:
 
 before_install:
   - echo "start create a image"
+  - ./gradlew build
   - docker build -t springtest ./
 
 script:
-  - docker run -e CI=true springTest
+  - docker run -e CI=true
 
 
 after_success:
