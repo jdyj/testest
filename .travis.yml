@@ -1,0 +1,17 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - echo "start create a image"
+  - docker build -t springTest -f Dockerfile .
+
+script:
+  - docker run -e CI=true springTest
+
+
+after_success:
+  - echo "success"
