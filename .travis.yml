@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start create a image"
-  - docker build -t springTest
+  - docker build -t springTest ./
 
 script:
   - docker run -e CI=true springTest
